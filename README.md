@@ -3,44 +3,12 @@
 
 
 ## Table of Contents
-
+- [Overview](#overveiw)
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
 - [Running the Application](#running-the-application)
 
-## Tech Stack
-
-- **Frontend:** React, Material UI
-- **Backend:** Node.js, Express.js
-
-## Installation
-
-1. Navigate to the backend directory and install dependencies:
-   ```bash
-   cd backend
-   npm run install
-    ```
-
-2. Navigate to the frontend directory and install dependencies:
-   ```bash
-   cd frontend
-   npm run install
-   ```
-
-## Running the Application
-
-2. Start the backend server:
-
-   ```bash
-   npm run start
-   ```
-4. Start the frontend server:
-
-   ```bash
-   npm run start
-   ```
-
-Open [http://localhost:3001](http://localhost:3001) to view the application in the browser.
+## Overview
 
 ### Data Structures Used
 
@@ -80,3 +48,37 @@ These classes are used to construct the AST when parsing rule strings. The AST a
     - For operand nodes, the condition is evaluated against the user data.
     - For operator nodes, the results of the left and right child nodes are combined using the specified logical operator.
   - The final result determines whether the user data satisfies the rule.
+
+## Tech Stack
+
+- **Frontend:** React, Material UI
+- **Backend:** Node.js, Express.js
+
+## Installation
+
+1. Navigate to the backend directory and install dependencies:
+   ```bash
+   cd backend
+   npm run install
+    ```
+
+2. Navigate to the frontend directory and install dependencies:
+   ```bash
+   cd frontend
+   npm run install
+   ```
+
+## Running the Application
+
+2. Start the backend server:
+
+   ```bash
+   npm run start
+   ```
+4. Start the frontend server:
+
+   ```bash
+   npm run start
+   ```
+
+Open [http://localhost:3001](http://localhost:3001) to view the application in the browser.
