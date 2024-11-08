@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { List, ListItem, ListItemText, Paper, Typography } from "@mui/material";
+import { API_BASE } from "../config";
 
 function RulesList() {
   const [rules, setRules] = useState([]);
@@ -10,7 +11,7 @@ function RulesList() {
 
   const fetchRules = async () => {
     try {
-      const response = await fetch("/api/rules");
+      const response = await fetch(`${API_BASE}/rules`);
       if (!response.ok) {
         throw new Error("Error fetching rules");
       }

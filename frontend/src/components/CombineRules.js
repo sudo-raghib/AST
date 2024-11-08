@@ -9,6 +9,7 @@ import {
   FormControlLabel,
   Box,
 } from "@mui/material";
+import { API_BASE } from "../config";
 
 function CombineRules() {
   const [rules, setRules] = useState([]);
@@ -21,7 +22,7 @@ function CombineRules() {
 
   const fetchRules = async () => {
     try {
-      const response = await fetch("/api/rules");
+      const response = await fetch(`${API_BASE}/rules`);
       if (!response.ok) {
         throw new Error("Error fetching rules");
       }
@@ -42,7 +43,7 @@ function CombineRules() {
 
   const handleCombine = async () => {
     try {
-      const response = await fetch("/api/combine_rules", {
+      const response = await fetch(`${API_BASE}/combine_rules`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

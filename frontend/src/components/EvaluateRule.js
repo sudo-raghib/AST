@@ -10,6 +10,7 @@ import {
   InputLabel,
   Box,
 } from "@mui/material";
+import { API_BASE } from "../config";
 
 function EvaluateRule() {
   const [rules, setRules] = useState([]);
@@ -23,7 +24,7 @@ function EvaluateRule() {
 
   const fetchRules = async () => {
     try {
-      const response = await fetch("/api/rules");
+      const response = await fetch(`${API_BASE}/rules`);
       if (!response.ok) {
         throw new Error("Error fetching rules");
       }
@@ -47,7 +48,7 @@ function EvaluateRule() {
         return;
       }
 
-      const response = await fetch("/api/evaluate_rule", {
+      const response = await fetch(`${API_BASE}/evaluate_rule`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { TextField, Button, Paper, Typography, Box } from "@mui/material";
+import { API_BASE } from '../config'
 
 function CreateRule() {
   const [ruleString, setRuleString] = useState("");
@@ -8,10 +9,13 @@ function CreateRule() {
   const handleCreateRule = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("/api/create_rule", {
+      const response = await fetch(`${API_BASE}/create_rule`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          // "Access-Control-Allow-Origin": "*",
+          // "Access-Control-Allow-Methods": "*",
+          // "Access-Control-Allow-Headers": "*"
         },
         body: JSON.stringify({ ruleString }),
       });
